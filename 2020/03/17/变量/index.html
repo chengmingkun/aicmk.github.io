@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="一入编程深似海，从此妹子是路人"><link rel="stylesheet" type="text/css" href="//fonts.loli.net/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.5"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.5"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><title>变量 | 小程</title><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">变量</h1><a id="logo" href="/.">小程</a><p class="description">没事瞎折腾</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="搜索"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">变量</h1><div class="post-meta"><a href="/2020/03/17/%E5%8F%98%E9%87%8F/#comments" class="comment-count"></a><p><span class="date">Mar 17, 2020</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h1 id="1变量"><a href="#1变量" class="headerlink" title="1变量"></a>1变量</h1><h2 id="1-1变量定义"><a href="#1-1变量定义" class="headerlink" title="1.1变量定义"></a>1.1变量定义</h2><ul>
+<li><p>在 Python 中，每个变量 <strong>在使用前都必须赋值</strong>，变量 <strong>赋值以后</strong> 该变量 <strong>才会被创建</strong></p>
+</li>
+<li><p>等号（=）用来给变量赋值</p>
+<ul>
+<li><p><code>=</code> 左边是一个变量名</p>
+</li>
+<li><p><code>=</code> 右边是存储在变量中的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量名 = 值</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>变量定义之后，后续就可以直接使用了</p>
+<h2 id="1-2变量的命名和使用"><a href="#1-2变量的命名和使用" class="headerlink" title="1.2变量的命名和使用"></a>1.2变量的命名和使用</h2><p><strong>在python中使用变量时，需要遵守的一些规则和指南</strong></p>
+<ul>
+<li>变量名只能包含字母，数字和下划线。变量名可以字母或下划线开头，但是不能以字母开头，例如 message_1可以做变量命名，但是1_message就不可以</li>
+<li>变量名不能包含空格，但可以使用下划线来分割其中的单词，例如greeting_greeting是可以的，但是greeting greeting就会应发报错</li>
+<li>不要将python的关键词和函数作为变量名，也不要使用python保留用于特殊用途的单词，如 print det等，详见下面补充</li>
+<li>变量名应该简单又具有描述性</li>
+<li>慎用小写字母l和大写字母O，因为容易看成1何0</li>
+</ul>
+<h2 id="1-3使用变量时避免命名错误"><a href="#1-3使用变量时避免命名错误" class="headerlink" title="1.3使用变量时避免命名错误"></a>1.3使用变量时避免命名错误</h2><p> 程序员都会犯错，而且大多数程序员每天都会犯错。虽然优秀的程序员也会犯错，但他们也知道如何高效地消除错误。下面来看一种你可能会犯的错误，并学习如何消除它。<br>我们将有意地编写一些引发错误的代码。请输入下面的代码，包括其中以粗体显示但拼写不正确的单词mesage：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">massage = <span class="string">"Hello Python Crash Course reader"</span></span><br><span class="line">print(masage)</span><br></pre></td></tr></table></figure>
+
+<p>​    程序存在错误时，Python解释器将竭尽所能地帮助你找出问题所在。程序无法成功地运行时，解释器会提供一个traceback。traceback是一条记录，指出了解释器尝试运行代码时，在什么地方陷入了困境。下面是你不小心错误地拼写了变量名时，Python解释器提供的traceback：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"E:\python\hello_word.py"</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    print(masage)</span><br><span class="line">NameError: name <span class="string">'masage'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure>
+
+<p>提示文件第2行有问题，修改代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">massage = <span class="string">"Hello Python Crash Course reader"</span></span><br><span class="line">print(massage)</span><br></pre></td></tr></table></figure>
+
+<p>这种情况运行成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello Python Crash Course reader</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4练习"><a href="#1-4练习" class="headerlink" title="1.4练习"></a>1.4练习</h2><ul>
+<li><p>简单消息：将一条消息存储到变量中，再将其打印出来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"Hello Word"</span></span><br><span class="line">print(name)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello Word</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>多条简单消息：将一条消息存储到变量中，将其打印出来；再将变量的值修改为一条新消息，并将其打印出来。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> num &lt;=<span class="number">5</span>:</span><br><span class="line">	print(num)</span><br><span class="line">	num += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h1 id="2补充-python关键字和内置函数"><a href="#2补充-python关键字和内置函数" class="headerlink" title="2补充 python关键字和内置函数"></a>2补充 python关键字和内置函数</h1><h2 id="2-1python关键字"><a href="#2-1python关键字" class="headerlink" title="2.1python关键字"></a>2.1python关键字</h2><p><strong>下面的关键字都有特殊含义，如果将他们用作变量名，将引发报错</strong></p>
+<table>
+<thead>
+<tr>
+<th>False</th>
+<th>class</th>
+<th>finally</th>
+<th>is</th>
+<th>return</th>
+<th>None</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>continue</strong></td>
+<td><strong>for</strong></td>
+<td><strong>lamdba</strong></td>
+<td><strong>try</strong></td>
+<td><strong>True</strong></td>
+<td><strong>def</strong></td>
+</tr>
+<tr>
+<td><strong>from</strong></td>
+<td><strong>nonlocal</strong></td>
+<td><strong>while</strong></td>
+<td><strong>and</strong></td>
+<td><strong>del</strong></td>
+<td><strong>global</strong></td>
+</tr>
+<tr>
+<td><strong>not</strong></td>
+<td><strong>with</strong></td>
+<td><strong>as</strong></td>
+<td><strong>elif</strong></td>
+<td><strong>if</strong></td>
+<td><strong>or</strong></td>
+</tr>
+<tr>
+<td><strong>yield</strong></td>
+<td><strong>assert</strong></td>
+<td><strong>else</strong></td>
+<td><strong>import</strong></td>
+<td><strong>pass</strong></td>
+<td><strong>break</strong></td>
+</tr>
+<tr>
+<td><strong>except</strong></td>
+<td><strong>in</strong></td>
+<td><strong>raise</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="2-2python内置函数"><a href="#2-2python内置函数" class="headerlink" title="2.2python内置函数"></a>2.2python内置函数</h2><p><strong>将内置函数名用作变量名时， 不会导致错误， 但将覆盖这些函数的行为</strong></p>
+<table>
+<thead>
+<tr>
+<th>abs()</th>
+<th>divmod()</th>
+<th>input()</th>
+<th>open()</th>
+<th>staticmethod()</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all()</td>
+<td>enumerate()</td>
+<td>int()</td>
+<td>ord()</td>
+<td>str()</td>
+</tr>
+<tr>
+<td>any()</td>
+<td>eval()</td>
+<td>isinstance()</td>
+<td>pow()</td>
+<td>sum()</td>
+</tr>
+<tr>
+<td>basestring()</td>
+<td>execfile()</td>
+<td>issubclass()</td>
+<td>print()</td>
+<td>super()</td>
+</tr>
+<tr>
+<td>bin()</td>
+<td>file()</td>
+<td>iter()</td>
+<td>property()</td>
+<td>tuple()</td>
+</tr>
+<tr>
+<td>bool()</td>
+<td>filter()</td>
+<td>len()</td>
+<td>range()</td>
+<td>type()</td>
+</tr>
+<tr>
+<td>bytearray()</td>
+<td>float()</td>
+<td>list()</td>
+<td>raw_input()</td>
+<td>unichr()</td>
+</tr>
+<tr>
+<td>callable()</td>
+<td>format()</td>
+<td>locals()</td>
+<td>reduce()</td>
+<td>unicode()</td>
+</tr>
+<tr>
+<td>chr()</td>
+<td>frozenset()</td>
+<td>long()</td>
+<td>reload()</td>
+<td>vars()</td>
+</tr>
+<tr>
+<td>classmethod()</td>
+<td>getattr()</td>
+<td>map()</td>
+<td>repr()</td>
+<td>xrange()</td>
+</tr>
+<tr>
+<td>cmp()</td>
+<td>globals()</td>
+<td>max()</td>
+<td>reversed()zip()</td>
+<td>Zip()</td>
+</tr>
+<tr>
+<td>compile()</td>
+<td>hasattr()</td>
+<td>memoryview()</td>
+<td>round()</td>
+<td>__import__()</td>
+</tr>
+<tr>
+<td>complex()</td>
+<td>hash()</td>
+<td>min()</td>
+<td>set()</td>
+<td>apply()</td>
+</tr>
+<tr>
+<td>delattr()</td>
+<td>help()</td>
+<td>next()</td>
+<td>setattr()</td>
+<td>buffer()</td>
+</tr>
+<tr>
+<td>dict()</td>
+<td>hex()</td>
+<td>object()</td>
+<td>slice()</td>
+<td>coerce()</td>
+</tr>
+<tr>
+<td>dir()</td>
+<td>id()</td>
+<td>oct()</td>
+<td>sorted()</td>
+<td>intern()</td>
+</tr>
+</tbody></table>
+</div><div class="post-copyright"><blockquote><p>原文作者: 小程</p><p>原文链接: <a href="https://aicmk.github.io/2020/03/17/变量/">https://aicmk.github.io/2020/03/17/变量/</a></p><p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p></blockquote></div><div class="tags"><a href="/tags/python/">python</a></div><div class="post-share"><div class="social-share"><span>分享到:</span></div></div><div class="post-nav"><a href="/2020/03/20/%E6%AD%A3%E5%88%99/" class="pre">正则</a><a href="/2020/03/14/%E5%B8%B8%E8%A7%81python%E6%8A%A5%E9%94%99/" class="next">常见python报错</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1变量"><span class="toc-text">1变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1变量定义"><span class="toc-text">1.1变量定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2变量的命名和使用"><span class="toc-text">1.2变量的命名和使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3使用变量时避免命名错误"><span class="toc-text">1.3使用变量时避免命名错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4练习"><span class="toc-text">1.4练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2补充-python关键字和内置函数"><span class="toc-text">2补充 python关键字和内置函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1python关键字"><span class="toc-text">2.1python关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2python内置函数"><span class="toc-text">2.2python内置函数</span></a></li></ol></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/03/20/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/20/%E6%AD%A3%E5%88%99/">正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/17/%E5%8F%98%E9%87%8F/">变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/14/%E5%B8%B8%E8%A7%81python%E6%8A%A5%E9%94%99/">常见python报错</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/typaro%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">typaro基本用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/13/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE/">pycharm快捷键</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/pycharm/" style="font-size: 15px;">pycharm</a> <a href="/tags/typaro/" style="font-size: 15px;">typaro</a> <a href="/tags/python/" style="font-size: 15px;">python</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">6</span></li></ul></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">网站地图</a> |  <a href="/atom.xml">订阅本站</a> |  <a href="/about/">联系博主</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次，本站总访客数:<i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人</p><p><span> Copyright &copy;<a href="/." rel="nofollow">小程.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.5"></script><div id="fullscreen-img" class="hide"><span class="close"></span></div><script type="text/javascript" src="/js/imgview.js?v=2.0.5" async></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.5" async></script><link rel="stylesheet" type="text/css" href="/share/css/share.css"><script type="text/javascript" src="/share/js/social-share.js" charset="utf-8"></script><script type="text/javascript" src="/share/js/qrcode.js" charset="utf-8"></script></body></html>
